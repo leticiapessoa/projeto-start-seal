@@ -1,0 +1,249 @@
+Algoritmo "SEAL BOOKS"
+
+Var
+   opcao:caracter
+   resp:caracter
+   servicos:caractere
+   opcaonumero,i:inteiro
+   nome,sobrenome,email:vetor[1..4]de caractere
+   cpf,telefone,numero,cep:vetor[1..4]de inteiro
+   estado,cidade,rua,senha,confsenha:vetor[1..4]de caractere
+
+Inicio
+
+   escreval("••• Bem Vindo ao SEAL BOOKS •••")
+   escreval("Abrindo portas à literatura")
+   escreval()
+   escreval("SEAL BOOKS apoia a educação, o desenvolvimento pessoal e o ")
+   escreval("enriquecimento da comunidade. Nossa equipe de profissionais")
+   escreval("apaixonados está aqui para ajudar você a navegar em nosso acervo")
+   escreval("de livros, mídia e recursos bibliotecários.")
+   escreval()
+
+   repita
+      para i de 1 ate 4 faca
+         escreval("Selecione a opção de sua preferência: ")
+         escreval()
+         escreval(" 1º CADASTRE-SE ")
+         escreval(" 2º LOGIN ")
+         escreval(" 3º SERVIÇOS")
+         escreval(" 4º CONTATO ")
+         escreval(" 5º EQUIPE ")
+         escreval(" 6º AJUDA ")
+         leia(opcaonumero)
+
+         escolha opcaonumero
+         caso 1
+            opcao <- "Cadastro"
+
+            escreval("••• CADASTRO •••")
+            escreva("NOME:")
+            leia(nome[i])
+            escreva("SOBRENOME:")
+            leia(sobrenome[i])
+            escreva("E-MAIL:")
+            leia(email[i])
+            escreva("CPF(apenas números):")
+            leia(cpf[i])
+            escreva("TELEFONE:")
+            leia(telefone[i])
+            escreva("ESTADO:")
+            leia(estado[i])
+            escreva("CIDADE:")
+            leia(cidade[i])
+            escreva("RUA:")
+            leia(rua[i])
+            escreva("NÚMERO:")
+            leia(numero[i])
+            escreva("CEP:")
+            leia(cep[i])
+            escreva("SENHA:")
+            leia(senha[i])
+            escreva("CONFIRME SUA SENHA:")
+            leia(confsenha[i])
+            escreval()
+
+            se (senha[i] <> confsenha[i]) entao
+               escreval("Sua senha está incorreta, por favor verifique-a")
+               escreva("SENHA:")
+               leia(senha[i])
+               escreva("CONFIRME SUA SENHA:")
+               leia(confsenha[i])
+               escreval()
+               se (senha[i] <> confsenha[i]) entao
+                  escreval("Sua senha está incorreta, por favor verifique-a")
+                  escreval("Você está digitando sua senha errada muitas vezes.")
+                  escreval("Tente se cadastrar novamente! ")
+               senao
+                  escreval("CADASTRO REALIZADO COM SUCESSO!")
+                  escreval()
+                  escreval("Deseja navegar em nosso sistema?(S/N)")
+                  leia(resp)
+                  se(resp = "N")entao
+                     interrompa
+                  fimse
+               fimse
+            senao
+               escreval("CADASTRO REALIZADO COM SUCESSO!")
+               escreval()
+               escreval("Deseja navegar em nosso sistema?(S/N)")
+               leia(resp)
+               se(resp = "N")entao
+                  interrompa
+               fimse
+            fimse
+
+         caso 2
+            opcao <- "Login"
+
+            escreval("••• LOGIN •••")
+            escreva("E-MAIL:")
+            leia(email[i])
+            escreva("SENHA:")
+            leia(senha[i])
+            escreval("LOGIN CONCLUÍDO!")
+            escreval()
+            escreval("Deseja navegar em nosso sistema?(S/N)")
+            leia(resp)
+            se(resp = "N")entao
+               interrompa
+            fimse
+
+         caso 3
+            opcao <- "Serviços"
+
+            escreval("••• SERVIÇOS •••")
+            escreval("Informe qual de nossos serviços você deseja utilizar: ")
+            escreval(" 1º EMPRÉSTIMO DOMICILIAR ")
+            escreval(" 2º LEITURA NA SEAL BOOKS ")
+            escreval(" 3º ENTREGAS ")
+            leia(servicos)
+
+            se (servicos = "1") entao
+               servicos <- "Empréstimo Domiciliar"
+
+               escreval("••• EMPRÉSTIMO DOMICILIAR •••")
+               escreval("Compromisso com a qualidade")
+               escreval()
+               escreval("Basta que você vá até a biblioteca")
+               escreval("com um Comprovante de Residência em mãos,")
+               escreval("o seu Documento de Identidade constando RG")
+               escreval("e CPF e apresente para a recepcionista da biblioteca.")
+               escreval("O cadastro é feito de maneira rápida utilizando")
+               escreval("os seus dados e a partir de então você já poderá")
+               escreval("começar a ler o livro que desejar da biblioteca.")
+               escreval("Serviço totalmente gratuíto.")
+               escreval("Deseja navegar em nosso sistema?(S/N)")
+               leia(resp)
+               se (resp = "N")entao
+                  interrompa
+               fimse
+            fimse
+
+            se (servicos = "2") entao
+               servicos <- "Leitura na SEAL BOOKS"
+
+               escreval("••• LEITURA NA SEAL BOOKS •••")
+               escreval("Supere as expectativas")
+               escreval()
+               escreval("Oferecemos serviços públicos e gratuitos")
+               escreval("de livre acesso à leitura em um ambiente acolhedor.")
+               escreval("Os leitores possuem livre acesso às estantes,")
+               escreval("organização do espaço interno que abriga espaços")
+               escreval("de leitura para adultos, jovens e crianças;")
+               escreval("Facilitando a circulação entre as estantes; ")
+               escreval("Espaço para acomodar todo o acervo no interior")
+               escreval("da biblioteca; Assentos e espaço suficiente para")
+               escreval("abrigar confortavelmente uma classe inteira")
+               escreval("e os demais usuários.")
+               escreval("Deseja navegar em nosso sistema?(S/N)")
+               leia(resp)
+               se (resp = "N")entao
+                  interrompa
+               fimse
+            fimse
+
+            se (servicos = "3")entao
+               servicos <- "Entregas"
+
+               escreval("••• ENTREGAS •••")
+               escreval("Satisfação garantida")
+               escreval()
+               escreval("O cadastro poderá ser feito através do nosso sistema,")
+               escreval("com os documentos necessários: comprovante de residência,")
+               escreval("documento de identidade e CPF.")
+               escreval("os livros escolhidos serão levados por um funcionário")
+               escreval("até a casa do munícipe.")
+               escreval("Deseja navegar em nosso sistema?(S/N)")
+               leia(resp)
+               se (resp = "N")entao
+                  interrompa
+               fimse
+            fimse
+
+
+         caso 4
+            opcao <- "CONTATO"
+
+            escreval("••• CONTATO •••")
+            escreval()
+            escreval("ENDEREÇO")
+            escreval("R. Antenor Navarro, 138 - Jaqueira, Recife - PE")
+            escreval("52050-080 - Pernambuco")
+            escreval()
+            escreval("EMAIL")
+            escreval("sealbooks@gmail.com")
+            escreval()
+            escreval("TELEFONE")
+            escreval("Tel: (81) 9877-7010")
+            escreval()
+            escreval("Deseja navegar em nosso sistema?(S/N)")
+            leia(resp)
+            se (resp = "N")entao
+               interrompa
+            fimse
+
+         caso 5
+            opcao <- "EQUIPE"
+
+            escreval("••• EQUIPE •••")
+            escreval("Estudantes de Desenvolvimento Web em Linguagem JAVA")
+            escreval()
+            escreval("Letícia Pessoa")
+            escreval("Nívea Gabrielly")
+            escreval("Rafaela Beatriz")
+            escreval("Marcone Faustino")
+            escreval()
+            escreval("Deseja navegar em nosso sistema?(S/N)")
+            leia(resp)
+            se (resp = "N")entao
+               interrompa
+            fimse
+
+         caso 6
+            opcao <- "Ajuda"
+
+            escreval("••• CENTRAL DE AJUDA •••")
+            escreval()
+            escreval("PERGUNTAS FREQUENTES")
+            escreval()
+            escreval("• ONDE POSSO VER AS TARIFAS DE MULTAS POR ATRASO?")
+            escreval()
+            escreval("O valor da multa por atraso é de R$ 5 por mês")
+            escreval("para cada livro com empréstimo.  O empréstimo pode ser")
+            escreval("renovado ao fim do prazo estipulado. Caso, o cliente não")
+            escreval("faça a renovação, será cobrado o valor da multa")
+            escreval("(R$ 5) a cada mês. A partir de R$ 15,00")
+            escreval("o nosso sistema bloqueará o usuário,")
+            escreval("suspendendo os serviços relacionados ao empréstimo.")
+            escreval()
+            escreval("• QUANTOS ITENS POSSO RETIRAR DE UMA VEZ?")
+            escreval()
+            escreval("Será possível fazer a retirada de 2 livros por CPF.")
+            escreval()
+            escreval("Deseja navegar em nosso sistema?(S/N)")
+            leia(resp)
+         fimescolha
+      fimpara
+   ate (resp = "N")
+fimalgoritmo
